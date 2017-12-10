@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>부트스트랩 101 템플릿</title>
+
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <!-- Overriding tame-->
+    <link rel="stylesheet" href="./styleCss.css">
+
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="./homepage.html">
+                <img alt="Brand" title="Home" src="./img/bearhand.jpg" >
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="./pages/IntroducePage.html" title="About me">About me<span class="sr-only">(current)</span></a></li>
+                <!-- Programming Toggle Dropdown menu -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="Programming">Programming <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="./pages/Java_content_page.html">Java</a></li>
+                        <li><a href="./pages/Java_spring_page.html">Java Spring</a></li>
+                        <li class="divider"></li>
+                        <li><a href="./pages/Python_page.html">Python</a></li>
+                        <li><a href="./pages/Hacking.html">Python&Hacking</a></li>
+                        <li class="divider"></li>
+                        <li><a href="./pages/Javascript_page.html">Javascript</a></li>
+                        <li><a href="./pages/Node_page.html">Node.js</a></li>
+                        <li><a href="./pages/Jquery_page.html">JQuery & AJAX</a></li>
+                        <li class="divider"></li>
+                        <li><a href="./pages/etc_page.html">ETC</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="./pages/diary_page.html" title="Diary">Diary</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hubby and so on.. <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/pages/photograph_page.html">Photograph</a></li>
+                        <li><a href="/pages/workout_page.html">Workout</a></li>
+                        <li class="divider"></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+
+                <button type="button" class="btn btn-default" id="submitBtn">Submit</button>
+            </form>
+
+            <!--not used this time-->
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="upperMargin">
+    <!-- background image is located at this point -->
+    <div class="blogTitle">
+        <!-- blog title overlaped at background image -->
+        <h1><strong>Ghobe's BLOG</strong></h1>
+    </div>
+</div>
+<!-- carousel start -->
+<!-- photo slider -->
+<div id="main">
+    <div class="container">
+
+        <div class="page-title"><h3><strong>Photos taken by my hand</strong></h3></div>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="6"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+            </div>
+
+            <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- carousel end -->
+    </div>
+
+    <!-- Jumbotron contents start
+        schedule contents will be located in this place form= "Date ; Title ; location ; simple content"  -->
+    <!--<div class="container" id="jumbotron_container">-->
+        <!--<div class="row">-->
+            <!--<div class="col-md-4">-->
+                <!--<div class="jumbotron" style="padding:2em">-->
+                    <!--<h2>Test_title</h2>-->
+                    <!--<p>This contents are just test contents. \nit will replace to another contents as soon as possible\n</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-md-4">-->
+                <!--<div class="jumbotron" style="padding:2em">-->
+                    <!--<h2>Test_title</h2>-->
+                    <!--<p>This contents are just test contents. \nit will replace to another contents as soon as possible\n</p>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="col-md-4">-->
+                <!--<div class="jumbotron" style="padding:2em">-->
+                    <!--<h2>Test_title</h2>-->
+                    <!--<p>This contents are just test contents. \nit will replace to another contents as soon as possible\n</p>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!-- shown to registered whereever boarder is recently -->
+    <div class="container" style="">
+        <div class="page-header">
+            <h3>Recently &nbsp&nbsp<small>showing a list which is registered recently</small></h3>
+        </div>
+        <div class="panel panel-default">
+            <div class="pannel-heading" >
+                <h2 style="margin-left:1em">Recent Posts</h2>
+            </div>
+            <div class="pannel-body">
+                <div class="list-group" id="recentpost">
+
+                    <!-- fill as javascript automatically; recent post top 10 contents -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<script src="./js/contents_add.js"></script>
+<script src="./js/getImagesList.js"></script>
+<script>
+    //recent post list-up function
+    functions.loadRecentContents("programming", 10, function(data) {
+        $("#recentpost").prepend(data);
+    })
+</script>
+
+<script>
+    // get an Image list from getImageLIst function (/js/getImagesList.js)
+    // return : Array of filename of images
+
+    getImagesList(function(pickedImages) {
+
+        for (var i=0 ; i<7 ; i++) {
+            var html = '<div class="item"><div class="center-block"><img src="./img/photographs/'+pickedImages[i]+'"></div></div>';
+            $(".carousel-inner").append(html);
+        }
+
+        // image resizing to fit on the screen
+        $(".center-block img").each(function() {
+            $(this).attr({
+                "width":$(".carousel-inner").width(),
+                "height":$(".carousel-inner").height()
+            });
+        });
+        // first element should be active class to operate a carousel
+        $(".item:first").addClass("active");
+
+    });
+</script>
+<script>
+    // search funciton click event, redirect to search result page
+    $("#submitBtn").click(function() {
+        window.location.href = 'searchResult.html?searchFor='+$(".form-control").val();
+    });
+</script>
+</body>
+</html>

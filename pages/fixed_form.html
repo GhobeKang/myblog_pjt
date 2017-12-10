@@ -1,0 +1,186 @@
+
+
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../homepage.html">
+                <img alt="Brand" title="Home" src="../img/bearhand.jpg" >
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="IntroducePage.html" title="About me">About me<span class="sr-only">(current)</span></a></li>
+                <!-- Programming Toggle Dropdown menu -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="Programming">Programming <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="Java_content_page.html">Java</a></li>
+                        <li><a href="Java_spring_page.html">Java Spring</a></li>
+                        <li class="divider"></li>
+                        <li><a href="Python_page.html">Python</a></li>
+                        <li><a href="Hacking.html">Python&Hacking</a></li>
+                        <li class="divider"></li>
+                        <li><a href="Javascript_page.html">Javascript</a></li>
+                        <li><a href="Node_page.html">Node.js</a></li>
+                        <li><a href="Jquery_page.html">JQuery & AJAX</a></li>
+                        <li class="divider"></li>
+                        <li><a href="etc_page.html">ETC</a></li>
+                    </ul>
+                </li>
+                <!-- Theories Toggle Dropdown menu -->
+                <!--<li class="dropdown">-->
+                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="Programming">Theories<span class="caret"></span></a>-->
+                    <!--<ul class="dropdown-menu" role="menu">-->
+                        <!--<li><a href="#">Java</a></li>-->
+                        <!--<li><a href="#">Java Spring</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li><a href="#">Python</a></li>-->
+                        <!--<li><a href="#">Python&Hacking</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li><a href="#">Javascript</a></li>-->
+                        <!--<li><a href="#">Node.js</a></li>-->
+                        <!--<li><a href="#">JQuery & AJAX</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li><a href="#">Algorithm</a></li>-->
+                        <!--<li><a href="#">Problems resolve</a></li>-->
+                        <!--<li class="divider"></li>-->
+                        <!--<li><a href="#">ETC</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <li><a href="diary_page.html" title="Diary">Diary</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hubby and so on.. <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="photograph_page.html">Photograph</a></li>
+                        <li><a href="workout_page.html">Workout</a></li>
+                        <li class="divider"></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="button" class="btn btn-default" id="submitBtn">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8" role="main">
+            <div class="page-header" id="mainTitle">
+
+            </div>
+            <div class="page-functions">
+                <button type="button" id="AddBtn" title="Write" data-toggle="modal" data-target="#writeModal">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+            </div>
+
+            <div class="modal fade" id="writeModal" aria-hidden="true" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h2 class="modal-title">Write</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="inputCategory"><h3>Category</h3></label>
+                                <select class="form-control" id="inputCategory">
+                                    <option>Java</option>
+                                    <option>Spring</option>
+                                    <option>JavaScript</option>
+                                    <option>Python</option>
+                                    <option>Hacking</option>
+                                    <option>NodeJS</option>
+                                    <option>JQuery</option>
+                                    <option>ETC</option>
+                                </select>
+                                <label for="inputTitle"><h3>Title</h3></label>
+                                <input id="inputTitle" class="form-control" type="text" placeholder="Input a content's Title">
+
+                                <label for="texteditor"><h3>Content</h3></label>
+                                <div class="form-items" id="texteditor">
+                                    <!-- Quill textEditor -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="commitBtn">Save changes</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <div class="page-body">
+                <div class='page-header'>
+                    <h2>
+
+                    </h2>
+                    <small>
+
+                    </small>
+                </div>
+                <div class='col-md-12'>
+                    <div class="contentPart">
+
+                    </div>
+                    <nav id="pagenation_navigation">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true" class="glyphicon glyphicon-menu-left"></span>
+                                </a>
+                            </li>
+                            <li class="start_point hidden"></li>
+                            <!-- pagenation sector.. it is filled from javascript automatically -->
+                            <li class="end_point hidden"></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true" class="glyphicon glyphicon-menu-right"></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- data is filled from DB contents -->
+
+            </div>
+
+
+        </div>
+
+        <div class="col-md-3" role="complementary">
+            <nav class="bs-docs-sidebar">
+                <ul class="nav bs-docs-sidenav">
+                    <li class="active"><a href="#" >sub Category</a></li>
+                    <li><a href="#">sub Category</a></li>
+                    <li><a href="#">sub Category</a></li>
+                    <li><a href="#">sub Category</a></li>
+                    <li><a href="#">sub Category</a></li>
+                    <li><a href="#">sub Category</a></li>
+                    <li><a href="#">sub Category</a></li>
+                    <li><a href="#">sub Category</a></li>
+                    <li><a href="#">sub Category</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,125 @@
+.carousel-inner {
+    height: 500px;
+    width: auto;
+}
+.center-block {
+    display: block;
+}
+.center-block img {
+    display: flex;
+    margin:0;
+}
+.carousel-caption {
+    color: black;
+    margin-top: 6%;
+    position: relative;
+    left: auto;
+    right: auto;
+}
+#jumbotron_container {
+    margin-top:10px;
+    padding:10px;
+}
+
+.pagination {
+    padding-left: 20%;
+}
+
+.page-functions {
+    display: flex;
+    justify-content: flex-end;
+}
+.form-items label input {
+    display: block;
+}
+#texteditor {
+    height: 350px;
+}
+.modal-content {
+    width: 800px;
+}
+.col-md-8 img {
+    width: 100%;
+    height: auto;
+}
+
+#sideMenu {
+    margin-top: 40px;
+    position: absolute;
+    line-height: 40px;
+}
+#sideMenu li {
+    text-decoration:none;
+    list-style-type: none;
+}
+.subMenuBtn {
+    font-size: 20px;
+    border-color: transparent;
+    background-color: transparent;
+    -webkit-padding-start: 5px;
+
+}
+.archiveBtn {
+    font-size: 25px;
+    border-color: transparent;
+    background-color: transparent;
+}
+
+.form-group label {
+    display:block;
+}
+
+.divide {
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    border-bottom:1px solid lightgray;
+}
+
+.col-md-3 {
+    display: flex;
+    justify-content: center;
+}
+.pagination li a:hover {
+    background-color: cornflowerblue !important;
+}
+.pagination li .active {
+    background-color: cornflowerblue !important;
+}
+.disabled {
+    color: gray;
+}
+.popover {
+    width: 700px;
+    max-width: 100%;
+}
+@font-face {
+    font-family: Cabin;
+    src: url('fonts/Cabin-Medium.otf');
+    font-family: Cabin-bold;
+    src: url('fonts/Cabin-Bold.otf');
+}
+.page-title h3 {
+    border-bottom: solid darkgray 1px;
+    font-family: Cabin-bold;
+    color: indigo;
+}
+
+.upperMargin {
+    font-family: Cabin;
+    background-image: url('img/tagcloud.jpg');
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position: 10% 30%;
+    z-index: -1;
+    width: 100%;
+    height: 400px;
+}
+.upperMargin .blogTitle {
+    margin-left: 48%;
+    padding-top: 3%;
+}
+.blogTitle h1 strong {
+    font-size: 90px;
+    color: indigo;
+}

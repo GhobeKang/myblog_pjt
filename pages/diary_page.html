@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>부트스트랩 101 템플릿</title>
+
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- Quill stylesheet -->
+    <link href="https://cdn.quilljs.com/1.3.4/quill.snow.css" rel="stylesheet">
+
+<!-- diary page specific css style, only affects at this page, so style tag is used instead of independence css file -->
+    <style>
+        .divide {
+            display: block;
+            margin-bottom: 10px;
+            margin-top: 5px;
+            border-bottom:1px solid lightgray;
+        }
+        .col-md-3 {
+            display: flex;
+            justify-content: center;
+        }
+        #sideMenu {
+            margin-top: 40px;
+            position: absolute;
+            line-height: 40px;
+        }
+        #sideMenu li {
+            text-decoration:none;
+            list-style-type: none;
+        }
+        .subMenuBtn {
+            font-size: 20px;
+            border-color: transparent;
+            background-color: transparent;
+            -webkit-padding-start: 5px;
+
+        }
+        .archiveBtn {
+            font-size: 25px;
+            border-color: transparent;
+            background-color: transparent;
+        }
+        .page-functions {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .panel-title a:hover{
+            text-decoration: none;
+        }
+        #texteditor {
+            height: 350px;
+        }
+        .modal-content {
+            width: 800px;
+        }
+        .form-items label input {
+            display: block;
+        }
+        .form-group label {
+            display:block;
+        }
+        @font-face {
+            font-family: Cabin;
+            src: url('/fonts/Cabin-Medium.otf');
+            font-family: Cabin-bold;
+            src: url('/fonts/Cabin-Bold.otf');
+        }
+        body {
+            font-family: Cabin;
+        }
+
+    </style>
+
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../homepage.html">
+                <img alt="Brand" title="Home" src="../img/bearhand.jpg" >
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="IntroducePage.html" title="About me">About me<span class="sr-only">(current)</span></a></li>
+                <!-- Programming Toggle Dropdown menu -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="Programming">Programming <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="Java_content_page.html">Java</a></li>
+                        <li><a href="Java_spring_page.html">Java Spring</a></li>
+                        <li class="divider"></li>
+                        <li><a href="Python_page.html">Python</a></li>
+                        <li><a href="Hacking.html">Python&Hacking</a></li>
+                        <li class="divider"></li>
+                        <li><a href="Javascript_page.html">Javascript</a></li>
+                        <li><a href="Node_page.html">Node.js</a></li>
+                        <li><a href="Jquery_page.html">JQuery & AJAX</a></li>
+                        <li class="divider"></li>
+                        <li><a href="etc_page.html">ETC</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="#" title="Diary">Diary</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hubby and so on.. <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="photograph_page.html">Photograph</a></li>
+                        <li><a href="workout_page.html">Workout</a></li>
+                        <li class="divider"></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+
+<!-- main content is started after here -->
+<div class="container">
+    <div class="page-header">
+        <h1>Daily Diary<br><small>Sharing anything about happend in a day</small></h1>
+    </div>
+    <div class="row">
+        <div class="col-md-9">
+            <!-- page functions location -->
+            <div class="page-functions">
+                <button type="button" id="AddBtn" title="Write" data-toggle="modal" data-target="#writeModal">
+                    <span class="glyphicon glyphicon-pencil"></span>
+                </button>
+            </div>
+            <div class="modal fade" id="writeModal" aria-hidden="true" role="dialog">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h2 class="modal-title">Write</h2>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="inputDate"><h3>Select Date</h3></label>
+                                <input id="inputDate" type="date" style="line-height:40px">
+                                <label for="inputTitle"><h3>Title</h3></label>
+                                <input id="inputTitle" class="form-control" type="text" placeholder="Input a content's Title">
+
+                                <label for="texteditor"><h3>Content</h3></label>
+                                <div class="form-items" id="texteditor">
+                                    <!-- Quill textEditor -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="commitBtn">Save changes</button>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal-dialog -->
+            </div><!-- /.modal -->
+            <div class="divide"></div>
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <!-- components will be located in here!! -->
+                <!-- through arcodian_form_create.js-->
+            </div>
+
+        </div>
+        <div class="col-md-3">
+            <ul id="sideMenu">
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<!-- quill library to get a texteditor -->
+<script src="https://cdn.quilljs.com/1.3.4/quill.js"></script>
+<script src="../js/contents_add.js"></script>
+<script>
+    // in write modal, texteditor is created by this function
+    $.getScript(("../js/quillInModal.js"), function(script, textStatus, jqXHR) {
+        console.log("quillInModal.js file loading: "+textStatus);
+    });
+</script>
+<script>
+    // in write modal, save and close button's function is created by this function
+    $.getScript(("../js/diaryPage_modal_Event.js"), function(script, textStatus, jqXHR) {
+        console.log("modal_event.js file loading: "+textStatus);
+    });
+</script>
+<script>
+    // diary form has arcodian form (toggled by click). it makes through this function
+    $.getScript("../js/arcodian_form_create.js", function(script, textStatus, jqXHR) {
+        console.log("arcodian_form_create.js file loading: "+textStatus);
+    });
+    // side menu navigation of filtered by date
+    $.getScript("../js/diary_archive_create.js", function(script, textStatus, jqXHR) {
+        console.log(textStatus);
+    });
+
+</script>
+<script>
+    // search button click event, redirected to search result page
+    $("#submitBtn").click(function() {
+        window.location.href = 'searchResult.html?searchFor='+$(".form-control").val();
+    });
+</script>
+</body>
+</html>

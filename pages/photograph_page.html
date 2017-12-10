@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 위 3개의 메타 태그는 *반드시* head 태그의 처음에 와야합니다; 어떤 다른 콘텐츠들은 반드시 이 태그들 *다음에* 와야 합니다 -->
+    <title>부트스트랩 101 템플릿</title>
+
+    <!-- 합쳐지고 최소화된 최신 CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+
+    <!-- 부가적인 테마 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- Overriding tame-->
+    <link rel="stylesheet" href="../stylePhotographPage.css">
+
+    <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
+    <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-static-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../homepage.html">
+                <img alt="Brand" title="Home" src="../img/bearhand.jpg" >
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="IntroducePage.html" title="About me">About me<span class="sr-only">(current)</span></a></li>
+                <!-- Programming Toggle Dropdown menu -->
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="Programming">Programming <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="Java_content_page.html">Java</a></li>
+                        <li><a href="Java_spring_page.html">Java Spring</a></li>
+                        <li class="divider"></li>
+                        <li><a href="Python_page.html">Python</a></li>
+                        <li><a href="Hacking.html">Python&Hacking</a></li>
+                        <li class="divider"></li>
+                        <li><a href="Javascript_page.html">Javascript</a></li>
+                        <li><a href="Node_page.html">Node.js</a></li>
+                        <li><a href="Jquery_page.html">JQuery & AJAX</a></li>
+                        <li class="divider"></li>
+                        <li><a href="etc_page.html">ETC</a></li>
+                    </ul>
+                </li>
+                <!-- Theories Toggle Dropdown menu -->
+                <!--<li class="dropdown">-->
+                <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="Programming">Theories<span class="caret"></span></a>-->
+                <!--<ul class="dropdown-menu" role="menu">-->
+                <!--<li><a href="#">Java</a></li>-->
+                <!--<li><a href="#">Java Spring</a></li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li><a href="#">Python</a></li>-->
+                <!--<li><a href="#">Python&Hacking</a></li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li><a href="#">Javascript</a></li>-->
+                <!--<li><a href="#">Node.js</a></li>-->
+                <!--<li><a href="#">JQuery & AJAX</a></li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li><a href="#">Algorithm</a></li>-->
+                <!--<li><a href="#">Problems resolve</a></li>-->
+                <!--<li class="divider"></li>-->
+                <!--<li><a href="#">ETC</a></li>-->
+                <!--</ul>-->
+                <!--</li>-->
+                <li><a href="diary_page.html" title="Diary">Diary</a></li>
+
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hubby and so on.. <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="photograph_page.html">Photograph</a></li>
+                        <li><a href="workout_page.html">Workout</a></li>
+                        <li class="divider"></li>
+                    </ul>
+                </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="button" class="btn btn-default" id="submitBtn">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container-fluid">
+    <div class="grid">
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20170902_0038.jpg"></div>
+        <div class="grid-item grid-item--small"><img src="../img/photographs/20170902_0039.jpg"></div>
+        <div class="grid-item grid-item--small"><img src="../img/photographs/20170902_0040.jpg"></div>
+        <div class="grid-item grid-item-default" ><img src="../img/photographs/20170902_0041.jpg"></div>
+        <div class="grid-item grid-item--small"><img src="../img/photographs/20170917_0001.jpg"></div>
+        <div class="grid-item grid-item--small"><img src="../img/photographs/20170917_0002.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20170917_0003.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20170917_0004.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20170917_0005.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20170917_0006.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20170917_0007.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20170917_0008.jpg"></div>
+        <div class="grid-item grid-item--small"><img src="../img/photographs/20170917_0009.jpg"></div>
+        <div class="grid-item grid-item--small"><img src="../img/photographs/20170917_0010.jpg"></div>
+        <div class="grid-item grid-item-default" ><img src="../img/photographs/20170917_0011.jpg"></div>
+        <div class="grid-item grid-item--small"><img src="../img/photographs/20170917_0012.jpg"></div>
+        <div class="grid-item grid-item--small"><img src="../img/photographs/20170917_0013.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20170917_0014.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20170917_0015.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20170917_0016.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20170917_0017.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20170917_0018.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20170917_0019.jpg"></div>
+        <div class="grid-item grid-item--small"><img src="../img/photographs/20170917_0020.jpg"></div>
+        <div class="grid-item grid-item--small"><img src="../img/photographs/20170917_0021.jpg"></div>
+        <div class="grid-item grid-item-default" ><img src="../img/photographs/20170917_0022.jpg"></div>
+        <div class="grid-item grid-item--small"><img src="../img/photographs/20170919_0023.jpg"></div>
+        <div class="grid-item grid-item--small"><img src="../img/photographs/20170919_0024.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20171004_0025.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20171004_0026.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20171013_0027.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20171013_0028.jpg"></div>
+        <div class="grid-item grid-item-default"><img src="../img/photographs/20171013_0029.jpg"></div>
+
+    </div>
+    <div class="modalForPicture">
+        <div class="close">
+            <span class="modal_close" >&times</span>
+        </div>
+        <div class="container">
+            <img class="modal_content">
+        </div>
+    </div>
+</div>
+
+
+
+
+<!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- 모든 컴파일된 플러그인을 포함합니다 (아래), 원하지 않는다면 필요한 각각의 파일을 포함하세요 -->
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<!-- firebase -->
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+<!-- masonry javascript CDN to get a grid layout-->
+<script src="../js/masonry.js"></script>
+<!-- imageLoaded to transform a screen more smooth, jquery plugin-->
+<script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+<!-- image resize function -->
+<script src="../js/imageResizing.js"></script>
+<script>
+    $(document).ready(function() {
+        $(".grid").imagesLoaded(function() {
+            $( ".grid-item img" ).fadeIn( 2000 );
+            // image resizing into grid-item-default size
+            $(".grid-item-default img").each(function() {
+                image_resizing.call($(this),".grid-item-default");
+            });
+            // image resizing into grid-item-small size
+            $(".grid-item--small img").each(function() {
+                image_resizing.call($(this),".grid-item--small");
+            });
+        });
+
+        // masonry initialization
+        $(function() {
+            $(".grid").masonry({
+                itemSelector: '.grid-item',
+                columnWidth: 7,
+                horizontalOrder: true
+            });
+        });
+
+        // if image is clicked, show a modal up
+        $(".grid-item img").click(function() {
+            $(".modalForPicture").fadeIn("1000", function() {});
+            $(".modalForPicture").css("display", "grid");
+            $(".modal_content").attr("src", $(this).attr("src"));
+        });
+        $(".modal_close").click(function() {
+            $(".modalForPicture").css("display", "none");
+        });
+
+        // search function, move to search result page
+        $("#submitBtn").click(function() {
+            window.location.href = 'searchResult.html?searchFor='+$(".form-control").val();
+        });
+    });
+
+</script>
+<script>
+
+</script>
+</body>
+</html>
