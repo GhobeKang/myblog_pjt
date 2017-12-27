@@ -1,7 +1,4 @@
-.carousel-inner {
-    height: 500px;
-    width: auto;
-}
+
 .center-block {
     display: block;
 }
@@ -36,7 +33,7 @@
     height: 350px;
 }
 .modal-content {
-    width: 800px;
+    width: auto;
 }
 .col-md-8 img {
     width: 100%;
@@ -104,22 +101,56 @@
     font-family: Cabin-bold;
     color: indigo;
 }
+@media only screen and (min-width: 481px) {
+    .upperMargin {
+        font-family: Cabin;
+        background-image: url('img/tagcloud.jpg');
+        background-repeat: no-repeat;
+        background-size: 70%;
+        background-position: 10% 30%;
+        z-index: -1;
+        width: 100%;
+        height: 400px;
+    }
+    .upperMargin .blogTitle {
+        margin-left: 48%;
+        padding-top: 3%;
+    }
+    .blogTitle h1 strong {
+        font-size: 90px;
+        color: indigo;
+    }
+    .carousel-inner {
+        height: 500px;
+        width: auto;
+    }
+}
 
-.upperMargin {
-    font-family: Cabin;
-    background-image: url('img/tagcloud.jpg');
-    background-repeat: no-repeat;
-    background-size: 70%;
-    background-position: 10% 30%;
-    z-index: -1;
-    width: 100%;
-    height: 400px;
+@media screen and (max-width: 480px) {
+    .upperMargin .blogTitle {
+        margin-left: 30%;
+    }
+    .blogTitle h1 strong {
+        font-size: 60px;
+    }
+    .upperMargin {
+        background-size: 80%;
+    }
+    .carousel-inner {
+        height: 300px;
+        width: auto;
+    }
+    .navbar-right {
+        display: none;
+    }
+    .form-control {
+        display: inline-block;
+        width: 250px;
+    }
+
 }
-.upperMargin .blogTitle {
-    margin-left: 48%;
-    padding-top: 3%;
-}
-.blogTitle h1 strong {
-    font-size: 90px;
-    color: indigo;
+@media screen and (max-width: 1000px) {
+    .bs-docs-sidebar {
+        display: none;
+    }
 }

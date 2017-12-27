@@ -58,8 +58,10 @@ var functions = {
                 });
             })
             .then(function() {
+                if (typeof callback === 'function') {
+                    callback();
+                }
                 console.log("saving a data to DB is successed!!");
-                location.reload();
             });
         location_recent.push().set({
             Rtitle : title,
@@ -108,7 +110,7 @@ var functions = {
 
         location.limitToLast(limitTo).on('value', function(snapshot){
             snapshot.forEach(function(eachdata) {
-                var data = "<a href=\"#\" class=\"list-group-item\">"+eachdata.val().Rtitle+"</a>";
+                var data = "<p class=\"list-group-item\">"+eachdata.val().Rtitle+"</p>";
                 if (typeof callback === 'function') {
                     callback(data);
                 }

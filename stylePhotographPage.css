@@ -1,31 +1,53 @@
+@media only screen and (min-width: 480px) {
 
-.grid-item {
-    float: left;
-    width: 300px;
-    height: 300px;
-    margin : 3px;
+    .grid-item--width2 {
+        width: 600px;
+    }
+    .grid-item--small {
+        width: 150px;
+        height: 150px;
+    }
+    .modal_content {
+        max-width: 700px;
+        width: 80%;
+    }
+    .modalForPicture .container {
+        padding-left: 200px;
+    }
+    .modal_close {
+        display: block;
+        padding-left: 90%;
+        padding-right: 50px;
+        color: white;
+        font-size: 40px;
+    }
 }
-.grid-item--width2 {
-    width: 600px;
-}
-.grid-item--small {
-    width: 150px;
-    height: 150px;
-}
-.grid-item-half-height {
-    height: 150px;
-}
-.grid-item--double {
-    width:600px;
-    height: 600px;
-}
-.grid-item img {
-    border-radius: 5px;
-}
-.grid-item:hover {
-    opacity: 0.6;
-}
+@media only screen and (max-width: 480px) {
+    .grid-item--width2 {
+        width: 150px;
+        height: 150px;
+    }
+    .grid-item--small {
+        width: 150px;
+        height: 150px;
+    }
+    .modalForPicture .container {
+        padding-left: 0;
+        margin-left: 10px;
+    }
+    .modal_content {
+        width: 400px;
+        hegith: auto;
+    }
+    .modal_close {
+        display: block;
+        padding-left: 45%;
+        padding-right: 50px;
+        color: white;
+        font-size: 40px;
+    }
 
+}
 .modalForPicture {
     display: none;
     z-index: 1;
@@ -39,27 +61,13 @@
     background-color: black;
     opacity: 0.95;
 }
-.close {
-    height:10px;
+
+.grid-item {
+    float: left;
+    width: 300px;
+    height: 300px;
+    margin : 3px;
 }
-.modal_close {
-    display: block;
-    padding-left: 90%;
-    padding-right: 50px;
-    color: white;
-    font-size: 40px;
-}
-.modal_close:hover {
-    cursor: pointer;
-}
-.modal_content {
-    max-width: 700px;
-    width: 80%;
-}
-.modalForPicture .container {
-    padding-left: 200px;
-}
-.modalForPicture .container img {opacity: 1}
 
 @font-face {
     font-family: Cabin;
@@ -70,3 +78,21 @@
 body {
     font-family: Cabin;
 }
+.grid-item img {
+    border-radius: 5px;
+}
+.grid-item:hover {
+    opacity: 0.6;
+}
+
+.close {
+    height:10px;
+}
+
+.modal_close:hover {
+    cursor: pointer;
+}
+
+
+.modalForPicture .container img {opacity: 1}
+

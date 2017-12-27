@@ -68,10 +68,12 @@ pagenation.getTotalContentNumber(pageName ,function(totalContentsNumber){
 //adding a content to inner of page-header tag
 functions.load("programming", pageName, function(data, total) {
     var firstData = data[0];
-
-    $(".page-header h2").empty().append(firstData.title);
-    $(".page-header small").empty().append(firstData.created_time);
-    $(".col-md-8 .contentPart").empty().append(firstData.content);
-
+    if (firstData == null) {
+        $(".col-md-8 .contentPart").empty().append('<img src=../img/images.jpg style="height:500px;margin-bottom: 50px">');
+    }else {
+        $(".page-header h2").empty().append(firstData.title);
+        $(".page-header small").empty().append(firstData.created_time);
+        $(".col-md-8 .contentPart").empty().append(firstData.content);
+    }
 });
 

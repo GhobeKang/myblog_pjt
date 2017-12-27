@@ -14,6 +14,21 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <!-- Overriding tame-->
     <link rel="stylesheet" href="../styleCss.css">
+    <style>
+        @font-face {
+            font-family: Cabin;
+            src: url('../fonts/Cabin-Medium.otf')
+        }
+        body {
+            font-family: Cabin;
+        }
+        .page-header p strong{
+            font-size: 25px;
+        }
+        .page-body p{
+            font-weight: normal;
+        }
+    </style>
 
     <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
     <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
@@ -79,7 +94,7 @@
                 <!--<li><a href="#">ETC</a></li>-->
                 <!--</ul>-->
                 <!--</li>-->
-                <li><a href="#" title="Diary">Diary</a></li>
+                <li><a href="diary_page.html" title="Diary">Diary</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hubby and so on.. <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -112,7 +127,64 @@
     </div><!-- /.container-fluid -->
 </nav>
 
+<div class="container">
+    <div class="page-header">
+        <p><strong>Default</strong></p>
+    </div>
+    <div class="page-body">
+        <div class="row">
+            <div class="col-md-3 col-sm-3">
+                <img src="../img/KakaoTalk_20171214_001810846.jpg" class="img-circle" width="150px" height="150px" style="display:inline-block">
+            </div>
+            <div class="col-md-9 col-sm-9">
+                <p>Name : Byoung-Cheol Kang / 강병철 </p>
+                <p>Birth : 1988.10.21. / Libra </p>
+                <p>Phone : 010-6221-9113 </p>
+                <p>Address : 경기도 수원시 영통구 매여울로10번길 14-10 B01호</p>
+                <p>postNum : 16524</p>
+            </div>
+        </div>
+    </div>
+    <div class="page-header">
+        <p><strong>Career</strong></p>
+    </div>
+    <div class="page-body">
+        <p>co. Name : HQTech</p>
+        <p>Duration : 2011.01. ~ 2013.12. </p>
+        <p>Description : Software (Samsung Smart TV application) testing, heuristic Test & But reporting to foreigner developer of Samsung</p>
+        <div class="divide"></div>
+        <p>co. Name : 링크정보통신</p>
+        <p>Duration : 2014.04 ~ 2017.02.</p>
+        <p>Description : Firewall, L4 specific coperation, Network infra management, network SI</p>
+        <p>project : Se-Jong Government complex network infra management &nbsp&nbsp&nbsp (2014.10. ~ 2017.02) </p>
+    </div>
+    <div class="page-header">
+        <p><strong> Level of Education </strong></p>
+    </div>
+    <div class="page-body">
+        <p>High school : 유신고등학교</p>
+        <p>Duration : 2004.03 ~ 2007.02</p>
+        <div class="divide"></div>
+        <p>College : Korea National Open University</p>
+        <p>Duration : 2012.03 ~ 2018.02. (expected graduate)</p>
+    </div>
+    <div class="page-header">
+        <p><strong>Certification</strong></p>
+    </div>
+    <div class="page-body">
+        <ul>
+            <li>정보처리기사<p>미래창조과학부 2015.10.23.</p></li>
+        </ul>
+    </div>
+    <div class="page-header">
+        <p><strong>ETC</strong></p>
+    </div>
+    <div class="page-body">
+        <p>Hubby : Photography, Workout, Reading a Book, Listening a classic, Sing a Song</p>
+        <p>Speciality : [still finding...]</p>
+    </div>
 
+</div>
 
 <!-- jQuery (부트스트랩의 자바스크립트 플러그인을 위해 필요합니다) -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

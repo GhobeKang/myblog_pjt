@@ -60,7 +60,7 @@
             height: 350px;
         }
         .modal-content {
-            width: 800px;
+            width: auto;
         }
         .form-items label input {
             display: block;
@@ -77,7 +77,15 @@
         body {
             font-family: Cabin;
         }
-
+        @media screen and (max-width: 480px) {
+            .navbar-right {
+                display: none;
+            }
+            .form-control {
+                display: inline-block;
+                width: 250px;
+            }
+        }
     </style>
 
     <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
