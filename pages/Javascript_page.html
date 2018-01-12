@@ -36,7 +36,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 <!-- firebase -->
 <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
-<script src="../js/contents_add.js"></script>
+<!--<script src="../js/contents_add.js"></script>-->
 <script src="../js/pagenation_function.js"></script>
 <!-- quill library to get a texteditor -->
 <script src="https://cdn.quilljs.com/1.3.4/quill.js"></script>
@@ -50,7 +50,6 @@
 <script>
     // variable part of pages
     $.get("fixed_form.html", function(data, status, xhr) {
-        console.log(status);
         $("body").prepend(data);
         $("title").after("<div class=\"pagename hidden\">JavaScript</div>");
         $(".col-md-8 #mainTitle").append("<h1>JavaScript Programming Language<br>&nbsp&nbsp" +

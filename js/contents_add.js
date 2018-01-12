@@ -130,7 +130,6 @@ var functions = {
             });
         });
 
-
     },
 
     loadForSearch: function(searchFor, callback) {
@@ -174,6 +173,24 @@ var functions = {
 
                         })
                 })
+            })
+        })
+    },
+    loadContentsNum: function(callback) {
+        const initApp = DefaultFuntionApp;
+        const database = initApp.database();
+        const defaultpathofDatabase = database.ref('/programming');
+        defaultpathofDatabase.on('value', function(snap) {
+            snap.forEach(function(contentTitle) {
+                var category = contentTitle.key;
+                var numbers = contentTitle.numChildren();
+                if (typeof callback === 'function') {
+                    var result = {
+                        category : category,
+                        numbers : numbers
+                    };
+                    callback(result)
+                }
             })
         })
     }

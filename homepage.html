@@ -13,7 +13,7 @@
     <!-- 부가적인 테마 -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <!-- Overriding tame-->
-    <link rel="stylesheet" href="./styleCss.css">
+    <link rel="stylesheet" href="./homecss.css">
 
     <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
     <!-- WARNING: Respond.js 는 당신이 file:// 을 통해 페이지를 볼 때는 동작하지 않습니다. -->
@@ -47,17 +47,17 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="Programming">Programming <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="./pages/Java_content_page.html">Java</a></li>
-                        <li><a href="./pages/Java_spring_page.html">Java Spring</a></li>
+                        <li><a href="./pages/Java_content_page.html" id="Java">Java</a></li>
+                        <li><a href="./pages/Java_spring_page.html" id="JavaSpring">Java Spring</a></li>
                         <li class="divider"></li>
-                        <li><a href="./pages/Python_page.html">Python</a></li>
-                        <li><a href="./pages/Hacking.html">Python&Hacking</a></li>
+                        <li><a href="./pages/Python_page.html" id="Python">Python</a></li>
+                        <li><a href="./pages/Hacking.html" id="Hacking">Python&Hacking</a></li>
                         <li class="divider"></li>
-                        <li><a href="./pages/Javascript_page.html">Javascript</a></li>
-                        <li><a href="./pages/Node_page.html">Node.js</a></li>
-                        <li><a href="./pages/Jquery_page.html">JQuery & AJAX</a></li>
+                        <li><a href="./pages/Javascript_page.html" id="JavaScript">Javascript</a></li>
+                        <li><a href="./pages/Node_page.html" id="NodeJS">Node.js</a></li>
+                        <li><a href="./pages/Jquery_page.html" id="JQuery">JQuery & AJAX</a></li>
                         <li class="divider"></li>
-                        <li><a href="./pages/etc_page.html">ETC</a></li>
+                        <li><a href="./pages/etc_page.html" id="ETC">ETC</a></li>
                     </ul>
                 </li>
 
@@ -66,8 +66,8 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Hubby and so on.. <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="/pages/photograph_page.html">Gallery</a></li>
-                        <li><a href="/pages/workout_page.html">Workout</a></li>
+                        <li><a href="./pages/photograph_page.html">Gallery</a></li>
+                        <li><a href="./pages/workout_page.html">Workout</a></li>
                         <li class="divider"></li>
                     </ul>
                 </li>
@@ -98,6 +98,9 @@
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>
+<div class="backgroundimagePosition">
+
+</div>
 <div class="upperMargin">
     <!-- background image is located at this point -->
     <div class="blogTitle">
@@ -140,31 +143,6 @@
         </div>
         <!-- carousel end -->
     </div>
-
-    <!-- Jumbotron contents start
-        schedule contents will be located in this place form= "Date ; Title ; location ; simple content"  -->
-    <!--<div class="container" id="jumbotron_container">-->
-        <!--<div class="row">-->
-            <!--<div class="col-md-4">-->
-                <!--<div class="jumbotron" style="padding:2em">-->
-                    <!--<h2>Test_title</h2>-->
-                    <!--<p>This contents are just test contents. \nit will replace to another contents as soon as possible\n</p>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="col-md-4">-->
-                <!--<div class="jumbotron" style="padding:2em">-->
-                    <!--<h2>Test_title</h2>-->
-                    <!--<p>This contents are just test contents. \nit will replace to another contents as soon as possible\n</p>-->
-                <!--</div>-->
-            <!--</div>-->
-            <!--<div class="col-md-4">-->
-                <!--<div class="jumbotron" style="padding:2em">-->
-                    <!--<h2>Test_title</h2>-->
-                    <!--<p>This contents are just test contents. \nit will replace to another contents as soon as possible\n</p>-->
-                <!--</div>-->
-            <!--</div>-->
-        <!--</div>-->
-    <!--</div>-->
 
     <!-- shown to registered whereever boarder is recently -->
     <div class="container" style="">
@@ -230,8 +208,15 @@
 <script>
     // search funciton click event, redirect to search result page
     $("#submitBtn").click(function() {
-        window.location.href = 'searchResult.html?searchFor='+$(".form-control").val();
+        window.location.href = './pages/searchResult.html?searchFor='+$(".form-control").val();
     });
+
+    functions.loadContentsNum(function(result) {
+        var contentTitle = result.category;
+        var contentNum = result.numbers;
+        $('#'+contentTitle).append('<span class="badge">'+contentNum+'</span>');
+    });
+
 </script>
 </body>
 </html>

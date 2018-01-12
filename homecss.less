@@ -1,0 +1,72 @@
+// font family define
+@font-face {
+  font-family: Cabin;
+  src: url('fonts/Cabin-Medium.otf');
+  font-family: Cabin-bold;
+  src: url('fonts/Cabin-Bold.otf');
+}
+
+// independent element define
+.page-title h3 {
+  border-bottom: solid darkgray 1px;
+  font-family: Cabin-bold;
+  color: indigo;
+}
+.badge {
+  float: right;
+  background: #5AAEFF;
+}
+
+// reactivility to screen
+@media only screen and (min-width: 481px) {
+  .backgroundimagePosition:before {
+    content: ' ';
+    font-family: Cabin;
+    background-image: url('img/tagcloud.jpg');
+    background-repeat: no-repeat;
+    opacity: 0.5;
+    display: block;
+    background-position: 0% 70%;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+  }
+
+  .upperMargin .blogTitle {
+    margin-left: 48%;
+    padding-top: 3%;
+  }
+  .blogTitle h1 strong {
+    font-size: 90px;
+    color: indigo;
+  }
+  .carousel-inner {
+    height: 500px;
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .upperMargin .blogTitle {
+    margin-left: 30%;
+  }
+  .blogTitle h1 strong {
+    font-size: 60px;
+  }
+  .upperMargin {
+    background-size: 80%;
+  }
+  .carousel-inner {
+    height: 300px;
+    width: auto;
+  }
+  .navbar-right {
+    display: none;
+  }
+  .form-control {
+    display: inline-block;
+    width: 250px;
+  }
+
+}

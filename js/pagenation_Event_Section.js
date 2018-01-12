@@ -66,8 +66,9 @@ pagenation.getTotalContentNumber(pageName ,function(totalContentsNumber){
 
 });
 //adding a content to inner of page-header tag
-functions.load("programming", pageName, function(data, total) {
+functions.load("programming", pageName, function(data) {
     var firstData = data[0];
+    console.log(firstData);
     if (firstData == null) {
         $(".col-md-8 .contentPart").empty().append('<img src=../img/images.jpg style="height:500px;margin-bottom: 50px">');
     }else {

@@ -86,6 +86,10 @@
                 width: 250px;
             }
         }
+        .badge {
+            float: right;
+            background: #5AAEFF;
+        }
     </style>
 
     <!-- IE8 에서 HTML5 요소와 미디어 쿼리를 위한 HTML5 shim 와 Respond.js -->
@@ -119,17 +123,17 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false" title="Programming">Programming <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="Java_content_page.html">Java</a></li>
-                        <li><a href="Java_spring_page.html">Java Spring</a></li>
+                        <li><a href="./Java_content_page.html" id="Java">Java</a></li>
+                        <li><a href="./Java_spring_page.html" id="JavaSpring">Java Spring</a></li>
                         <li class="divider"></li>
-                        <li><a href="Python_page.html">Python</a></li>
-                        <li><a href="Hacking.html">Python&Hacking</a></li>
+                        <li><a href="./Python_page.html" id="Python">Python</a></li>
+                        <li><a href="./Hacking.html" id="Hacking">Python&Hacking</a></li>
                         <li class="divider"></li>
-                        <li><a href="Javascript_page.html">Javascript</a></li>
-                        <li><a href="Node_page.html">Node.js</a></li>
-                        <li><a href="Jquery_page.html">JQuery & AJAX</a></li>
+                        <li><a href="./Javascript_page.html" id="JavaScript">Javascript</a></li>
+                        <li><a href="./Node_page.html" id="NodeJS">Node.js</a></li>
+                        <li><a href="./Jquery_page.html" id="JQuery">JQuery & AJAX</a></li>
                         <li class="divider"></li>
-                        <li><a href="etc_page.html">ETC</a></li>
+                        <li><a href="./etc_page.html" id="ETC">ETC</a></li>
                     </ul>
                 </li>
 
@@ -255,7 +259,11 @@
     $.getScript("../js/diary_archive_create.js", function(script, textStatus, jqXHR) {
         console.log(textStatus);
     });
-
+    functions.loadContentsNum(function(result) {
+        var contentTitle = result.category;
+        var contentNum = result.numbers;
+        $('#'+contentTitle).append('<span class="badge">'+contentNum+'</span>');
+    });
 </script>
 <script>
     // search button click event, redirected to search result page

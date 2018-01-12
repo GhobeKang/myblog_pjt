@@ -5,9 +5,11 @@ $("#commitBtn").click(function() {
     var category = $("#inputCategory").val();
     var title = $("#inputTitle").val();
     var content = quill.root.innerHTML; //it is returned to Delta type data(with format and objects)
+    var contentTextOnly = quill.getText(0,quill.getLength());
+    functions.add("programming",category,title,content,contentTextOnly, function() {
 
-    functions.add("programming",category,title,content, function() {
         window.location.reload();
+
     });
 
     $("#writeModal").modal('hide');
