@@ -56,19 +56,19 @@ var functions = {
                     content: content,
                     textOnly: contentTextOnly,
                     created_time: createTime
+                }, function() {
+                    if (typeof callback === 'function') {
+                        callback();
+                    }
                 });
             })
             .then(function() {
-                if (typeof callback === 'function') {
-                    callback();
-                }
                 console.log("saving a data to DB is successed!!");
             });
         location_recent.push().set({
             Rtitle : title,
             Rcontent : content
         });
-
     },
 
     load : function (categories, subCategory, callback) {
